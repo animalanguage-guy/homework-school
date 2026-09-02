@@ -3,6 +3,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyC-IkNZCeMyEaezLOSmHFGyjPPn6wt7Hsw",
   authDomain: "domaskola.firebaseapp.com",
+  databaseURL: "https://domaskola-default-rtdb.firebaseio.com/", 
   projectId: "domaskola",
   storageBucket: "domaskola.firebasestorage.app",
   messagingSenderId: "272255887603",
