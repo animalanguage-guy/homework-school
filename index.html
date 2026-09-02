@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашкола</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🏫 Домашкола</h1>
+        <div id="auth-section">
+            <!-- Сюда JS будет вставлять форму входа или кнопку выхода -->
+        </div>
+    </header>
+
+    <main>
+        <!-- Форма авторизации -->
+        <section id="login-screen" class="card hidden">
+            <h2>Вход в систему</h2>
+            <div class="form-group">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" placeholder="Введите имя или stepadmin2015">
+            </div>
+            <div class="form-group">
+                <label for="password">Пароль (только для учителя):</label>
+                <input type="password" id="password" placeholder="Ученики оставляют пустым">
+            </div>
+            <button id="btn-login">Войти</button>
+            <p id="login-error" class="error hidden">Неверный пароль для администратора!</p>
+        </section>
+
+        <!-- Главная страница: Список заданий (Видят все) -->
+        <section id="main-feed" class="card">
+            <h2>📋 Актуальные домашние задания</h2>
+            <div id="tasks-list">
+                <!-- Задания выводятся динамически -->
+            </div>
+        </section>
+
+        <!-- Панель Учителя (Админка) -->
+        <section id="teacher-panel" class="card hidden">
+            <h2>🛠 Панель учителя (stepadmin2015)</h2>
+            
+            <h3>Добавить новое задание</h3>
+            <div class="form-group">
+                <input type="text" id="new-task-title" placeholder="Предмет и тема (например, Математика стр. 5)">
+                <button id="btn-add-task">Опубликовать</button>
+            </div>
+
+            <h3>Проверка и оценки</h3>
+            <div class="form-group">
+                <label for="select-student">Выбрать ученика:</label>
+                <input type="text" id="select-student" placeholder="Имя ученика">
+                
+                <label for="select-task">Задание:</label>
+                <select id="select-task"></select>
+                
+                <label for="grade-value">Оценка / Статус:</label>
+                <input type="text" id="grade-value" placeholder="Например: 5, 4, Переделать, Долг">
+                
+                <button id="btn-set-grade">Поставить оценку</button>
+            </div>
+        </section>
+
+        <!-- Личный кабинет ученика -->
+        <section id="student-panel" class="card hidden">
+            <h2>👤 Личный кабинет: <span id="student-name-title"></span></h2>
+            <div class="dashboard">
+                <div class="db-box">
+                    <h3>📚 Мои оценки и долги</h3>
+                    <ul id="student-grades-list"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
