@@ -1,0 +1,128 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2c3e50;
+    --bg-color: #f5f7fa;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    background: var(--secondary-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+    border-bottom: 2px solid var(--bg-color);
+    padding-bottom: 5px;
+}
+
+h3 {
+    margin: 15px 0 5px 0;
+    color: #555;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="password"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #357abd;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.error {
+    color: var(--error-color);
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.task-item {
+    background: var(--bg-color);
+    padding: 12px;
+    border-left: 5px solid var(--primary-color);
+    margin-bottom: 10px;
+    border-radius: 0 4px 4px 0;
+}
+
+.logout-btn {
+    background: var(--error-color);
+}
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
