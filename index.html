@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Домашкола</title>
+    <!-- Подключаем Firebase SDK v8 через CDN -->
+    <script src="https://gstatic.com"></script>
+    <script src="https://gstatic.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>🏫 Домашкола</h1>
-        <div id="auth-section">
-            <!-- Сюда JS будет вставлять форму входа или кнопку выхода -->
-        </div>
+        <div id="auth-section">Вы не авторизованы</div>
     </header>
 
     <main>
@@ -20,7 +21,7 @@
             <h2>Вход в систему</h2>
             <div class="form-group">
                 <label for="username">Имя пользователя:</label>
-                <input type="text" id="username" placeholder="Введите имя">
+                <input type="text" id="username" placeholder="Введите имя или stepadmin2015">
             </div>
             <div class="form-group">
                 <label for="password">Пароль (только для учителя):</label>
@@ -33,9 +34,7 @@
         <!-- Главная страница: Список заданий (Видят все) -->
         <section id="main-feed" class="card">
             <h2>📋 Актуальные домашние задания</h2>
-            <div id="tasks-list">
-                <!-- Задания выводятся динамически -->
-            </div>
+            <div id="tasks-list">Загрузка заданий...</div>
         </section>
 
         <!-- Панель Учителя (Админка) -->
